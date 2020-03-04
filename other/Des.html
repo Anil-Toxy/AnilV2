@@ -1,0 +1,285 @@
+<html>
+<head>
+</head>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<body>
+
+
+<div class="wrapper">
+  <div class="menu">
+    <div class="svg-wrapper">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+    <div class="text">SKILLS</div>
+  </svg>
+</div>
+    <div class="svg-wrapper">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+    <div class="text">PROJECTS</div>
+  </svg>
+</div>
+    <div class="svg-wrapper">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+    <div class="text">STORY</div>
+  </svg>
+</div>
+    <div class="svg-wrapper">
+  <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+    <rect class="shape" height="60" width="320" />
+    <div class="text">EMAIL</div>
+  </svg>
+</div>
+  </div>
+  <span class="toggle-menu"><b>X</b></span>
+</div>
+
+
+
+
+<div class="container">
+<div class="toggle">
+<p id="Toggle-menu"><b>MENU</b><p>
+</div>
+  <div class="card">
+    <div class="img-container">
+      <div id="picture">
+      </div>
+      <div id="logo">
+      </div>
+    </div>
+	<div class="content-tab">
+		<div class="tab default">
+		</div>
+		<div class="tab skill">
+		</div>
+		<div class="tab project">
+		</div>
+		<div class="tab story">
+		</div>
+		<div class="tab email">
+		</div>
+	
+	</div>
+  </div>
+  <div class="border left"></div>
+  <div class="border right"></div>
+</div>
+
+<script>
+$('#Toggle-menu').on("click",function(){
+$('.wrapper').show();
+});
+$('.toggle-menu').on("click",function(){
+$('.wrapper').hide();
+});
+</script>
+
+
+
+
+
+</body>
+</html>
+
+<style>
+*{
+box-sizing: border-box;
+padding:0;
+margin:0;
+font-family: sans-serif;
+
+}
+
+.text-Gradient{
+	font-size:32px;
+    background: linear-gradient(to left,#db36a4 76%,#f7ff00 );
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	}
+body {
+  background: #e2e1e0;
+  text-align: center;
+}
+
+.container{
+      position: relative;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  height:500px ;
+  position: relative;
+  top:50%;
+  left:50%;
+  width: 80%;
+  transform: translate(-50%,20%);
+   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.border{
+     position: absolute;
+    width: 10px;
+    height: 100%;
+    
+  background: #f7ff00; 
+  background: -webkit-linear-gradient(to right, #f7ff00, #db36a4); 
+  background: linear-gradient(to right, #f7ff00, #db36a4);
+	background-size: 400% 400%;
+	
+}
+ /* IMAGE PART */
+.img-container {
+    position: absolute;
+  padding:5px;
+    top: -5%;
+    right: 30px;
+    width: 25%;
+    height: 40%;
+    background: #e2e1e0;
+}
+div#picture {
+  height:100%;
+  border:5px solid white;
+}
+.img-container::after{
+     content: '';
+    position: absolute;
+    bottom: -20px;
+    margin: 5px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #ce7a0c;
+  
+}
+
+
+
+.left{
+  top: 20%;
+    left: 10%;
+  -webkit-animation: BorderGradientLeft 15s ease infinite;
+	-moz-animation: BorderGradientLeft 15s ease infinite;
+	animation: BorderGradientLeft 15s ease infinite;
+}
+.right{
+  top: 20%;
+    right: 10%;
+  -webkit-animation: BorderGradientRight 15s ease infinite;
+	-moz-animation: BorderGradientRight 15s ease infinite;
+	animation: BorderGradientRight 15s ease infinite;
+}
+.right::before{
+ content: '';
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    left: 20px;
+    background: #c5c8d4;
+}
+
+/* MENU */
+
+.wrapper{
+  position:fixed;
+  width:100%;
+  height:100%;
+  display:none;
+  background-image: linear-gradient(45deg,#f13772,#ff9901, rgba(255,0,0,0) 80%);
+  z-index:9999;
+}
+.menu{
+position: fixed;
+  left:10%;
+  bottom:0;
+  width:50%:
+  
+}
+.svg-wrapper {
+  position: relative;
+  width: 320px;  
+  padding:10px;
+}
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 2px;
+  fill: transparent;
+  stroke: white;
+  border-bottom: 5px solid black;
+  transition: stroke-width 1s, stroke-dashoffset 1s, stroke-dasharray 1s;
+}
+.text {
+  font-family: 'Roboto Condensed';
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  top: -48px;
+  position: relative;
+}
+.svg-wrapper:hover .shape {
+  stroke-width: 6px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+
+
+@keyframes BorderGradientLeft {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+@keyframes BorderGradientRight {
+	0% {
+    background-position: 50% 0% 
+		
+	}
+	50% {
+		background-position:  100% 50% 
+	}
+	100% {
+		background-position:  50% 0%
+	}
+}
+
+
+/** TOOGLE **/
+
+.toggle {
+    position: absolute;
+    top: 30;
+    padding: 2%;
+	cursor:pointer;
+}
+span.toggle-menu {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+	cursor:pointer;
+}
+
+/** CONTENT **/
+.content-tab {
+    position: relative;
+    width: 75%;
+    height: 100%;
+    background: antiquewhite;
+}
+.tab{
+padding:10px;
+}
+
+</style>
