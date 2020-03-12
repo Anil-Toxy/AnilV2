@@ -1088,7 +1088,7 @@ h3::before {
   }
   h1 {
     font-size: 1.5em;
-    margin-top: 20px;
+    margin-top: -10px;
   }
   h3::after {
     display: none;
@@ -1114,7 +1114,7 @@ h3::before {
     display: none;
   }
   .toggle {
-    top: 6%;
+    top: 2%;
     left: 89%;
     z-index: 88888;
     width: 25px;
@@ -1175,8 +1175,8 @@ h3::before {
     float: right;
   }
   .container-switcher {
-    top: 10%;
-    right: 0.8%;
+    top: 7%;
+    right: 1.8%;
     left: auto;
     z-index: 9999;
   }
