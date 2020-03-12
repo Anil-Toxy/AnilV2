@@ -1512,6 +1512,13 @@
         <!-- <p id="Toggle-menu"><b>MENU</b></p>
         <p></p> -->
       </div>
+      <div class="container-switcher">
+        <label class="switch">
+          <input type="checkbox" id="colorSwitcher" /><span
+            class="slider"
+          ></span>
+        </label>
+      </div>
 
       <div class="card">
         <!-- <div class="img-container">
@@ -2314,6 +2321,21 @@
             $("div#columns figure figcaption > p ").addClass("blink-text");
           }
         );
+        $("#colorSwitcher").click(function() {
+          if ($(this).prop("checked")) {
+            $("body").css({ background: "#303030" });
+            $(".bio").css({ color: "white" });
+            $("section.blocks").css({ color: "white" });
+            $("section.thoughts").css({ color: "white" });
+            $(".toggle").css({ "background-color": "#ffffff9e" });
+          } else {
+            $("body").css({ background: "#ffffff" });
+            $(".bio").css({ color: "#343e67" });
+            $("section.blocks").css({ color: "black" });
+            $("section.thoughts").css({ color: "black" });
+            $(".toggle").css({ "background-color": "none" });
+          }
+        });
       });
     </script>
   </body>
