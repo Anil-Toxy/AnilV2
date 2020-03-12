@@ -2198,16 +2198,19 @@
     </div>
 
     <script>
-      // function myFunction(x) {
-      //   if (x.matches) {
-      //     // If media query matches
-      //     document.body.style.backgroundColor = "yellow";
-      //   } else {
-      //     document.body.style.backgroundColor = "pink";
-      //   }
-      // }
+      function myFunction(x) {
+        if (x.matches) {
+          if ($(".wrapper").hasClass("open")) {
+            $("#Toggle-menu").hide();
+            $(".container-switcher").hide();
+          } else {
+            $("#Toggle-menu").show();
+            $(".container-switcher").show();
+          }
+        }
+      }
 
-      // var x = window.matchMedia("(min-width: 281px) and (max-width: 767px)");
+      var x = window.matchMedia("(min-width: 281px) and (max-width: 767px)");
       // myFunction(x); // Call listener function at run time
       // x.addListener(myFunction);
 
@@ -2219,6 +2222,7 @@
       $(".send-text").hide();
       $("#Toggle-menu,.toggle-menu").on("click", function() {
         $(".wrapper").toggleClass("open");
+        myFunction(x);
       });
       $("section.blocks:even").css({
         "flex-direction": "row-reverse",
