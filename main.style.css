@@ -1074,6 +1074,9 @@ h3::before {
     width: 100%;
     transform: translate(0%, 0%);
   }
+  .ribbon {
+    margin-bottom: 0.5em;
+  }
   .bio {
     font-size: 0.8em;
   }
